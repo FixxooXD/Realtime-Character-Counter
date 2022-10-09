@@ -37,6 +37,7 @@
 
 
       <script>
+        // making variables 
        let counter = document.getElementById('count');
        let left =  document.getElementById('left');
        const textarea = document.getElementById('textarea');
@@ -44,13 +45,16 @@
        textarea.addEventListener('keyup',() =>{
              updateCounter();
        })
+    //    is it called earlier to set the values of  "counter"  and the reaming 
        updateCounter();
+
            function updateCounter(){
+            // taking the "valuelength" in the textarea that we entered 
+            // it will happen at every keypress 
               counter.innerText = textarea.value.length;
+            //   it used to changed the value of remaing by subtracting from the maxlength set at the html part of textarea with the "valuelength" of textarea
               left.innerText = textarea.getAttribute('maxLength') - textarea.value.length;
            }
-
-
       </script>
 
 </body>
